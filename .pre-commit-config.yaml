@@ -15,7 +15,7 @@ repos:
     rev: 3.9.2
     hooks:
     -     id: flake8
-    exclude: 'demo.py|env|scikit-prepare.ipynb'
+    exclude: 'setup.py|env|init_setup.sh'
 
 -   repo: https://github.com/codespell-project/codespell
     rev: v1.16.0
@@ -26,3 +26,8 @@ repos:
         entry: codespell --ignore-words ignore-spelling-words.txt readme.md
         language: python
         types: [text]
+
+-   repo: https://github.com/psf/black
+    rev: 22.8.0
+    hooks:
+    -   id: black
