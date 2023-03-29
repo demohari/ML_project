@@ -4,6 +4,7 @@ import os
 import pandas as pd
 from finance_complaint.constant import TIMESTAMP
 import shutil
+
 LOG_DIR = "logs"
 
 
@@ -19,10 +20,11 @@ os.makedirs(LOG_DIR, exist_ok=True)
 
 LOG_FILE_PATH = os.path.join(LOG_DIR, LOG_FILE_NAME)
 
-logging.basicConfig(filename=LOG_FILE_PATH,
-                    filemode="w",
-                    format='[%(asctime)s] \t%(levelname)s \t%(lineno)d \t%(filename)s \t%(funcName)s() \t%(message)s',
-                    level=logging.INFO
-                    )
+logging.basicConfig(
+    filename=LOG_FILE_PATH,
+    filemode="w",
+    format="[%(asctime)s] \t%(levelname)s \t%(lineno)d \t%(filename)s \t%(funcName)s() \t%(message)s",
+    level=logging.INFO,
+)
 
 logger = logging.getLogger("FinanceComplaint")

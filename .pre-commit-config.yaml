@@ -11,11 +11,11 @@ repos:
     -   id: check-ast
     -   id: check-json
 
--   repo: https://github.com/pycqa/flake8.git
-    rev: 3.9.2
+-   repo: https://github.com/pycqa/flake8
+    rev: 45699b61ae4522864c60480c80d7c2ffb952d52e
     hooks:
-    -     id: flake8
-    exclude: 'setup.py|env|init_setup.sh'
+    -   id: flake8
+        exclude: 'exception.py|logging.py|setup.py'
 
 -   repo: https://github.com/codespell-project/codespell
     rev: v1.16.0
